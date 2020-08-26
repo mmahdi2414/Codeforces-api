@@ -1,0 +1,12 @@
+<%- include('header') -%>
+    <div class="card">
+    
+        <img src="<%= avatar %>">
+        <h2><%= `${firstName} ${lastName}` %></h2>
+        <p class="title"><%= maxRank %></p>
+        <p>Country: <%= country %></p>
+        <p>City: <%= city %></p>
+        <p>Organization: <%= organization %></p>
+        <a href="<%= `/gyms?handle=${handle}` %>" class="button">Get all gym contests</a>
+    </div>
+<%- include('footer') -%>

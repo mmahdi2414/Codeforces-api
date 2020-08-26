@@ -1,0 +1,28 @@
+<%- include('header')-%>
+    <body>
+        <table class="table table-striped">
+            <%if (data.length > 0) {%>
+                <thead>
+                    <tr>   
+                        <th scope="col">#</th> 
+                        <% for (let key in data[0]){ %>
+                            <th scope="col"><%= key %></th> 
+                        <% } %>   
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (let i = 0; i < data.length; i++) { %>
+                        
+                        <tr>
+                            <th scope="row"><%= i + 1 %></th>
+                            <% for (let key in data[0]){ %>
+                                <td><%= data[i][key]%></td>
+                            <% } %>   
+                        </tr>    
+                    <% } %>
+                </tbody>
+            <% } %>
+
+         </table>
+    </body>
+</html>
