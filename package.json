@@ -25,7 +25,9 @@
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
+    "mongoose": "^5.10.1",
     "path": "^0.12.7",
+    "tor-axios": "^1.0.9",
     "winston": "^3.2.1"
   },
   "devDependencies": {

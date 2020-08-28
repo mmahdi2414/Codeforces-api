@@ -7,6 +7,25 @@
         <p>Country: <%= country %></p>
         <p>City: <%= city %></p>
         <p>Organization: <%= organization %></p>
-        <a href="<%= `/gyms?handle=${handle}` %>" class="button">Get all gym contests</a>
+        <!-- <a href="<%= `/gyms?handle=${handle}` %>" class="button">Get all gym contests</a> -->
+        <form action="/gyms">
+            <div class="form-group">
+                <label for="season">season</label>
+                <select class="form-control" id="season" , name="season">
+                    <% for(let s in seasons) { %>
+                        <option value="<%= seasons[s] %>"><%= seasons[s] %></option>
+                    <% } %>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="kind">kind</label>
+                <select class="form-control" id="kind" , name="kind">
+                    <% for(let s in kinds) { %>
+                        <option value="<%= kinds[s] %>"><%= kinds[s] %></option>
+                    <% } %>
+                </select>
+            </div>
+            <button type="submit" class="button" name="handle" value="<%= handle %>">Get all gym contests</button>
+        </form>
     </div>
 <%- include('footer') -%>
